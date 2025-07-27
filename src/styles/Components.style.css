@@ -37,6 +37,7 @@
   justify-content: space-evenly;
   align-items: center;
   padding: 0.5em;
+  box-sizing: content-box;
 }
 
 .container-button ul {
@@ -44,9 +45,12 @@
   flex-direction: row;
   list-style: none;
   column-gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.container-button ul a {
+.container-button ul li {
   width: 115px;
   height: 4em;
   text-decoration: none;
@@ -59,9 +63,22 @@
   border-radius: 0.3em;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
+  flex: 0.001 0 115px;
+  margin-top: 0.5em;
+  overflow: hidden;
 }
 
-.container-button ul a:hover {
+.container-button ul a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-button ul li:hover {
   transform: scale(1.1);
   background-color: rgba(32, 236, 49, 0.8);
 }
