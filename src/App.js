@@ -1,6 +1,6 @@
 import "./App.css";
 import "./styles/Components.style.css";
-import { Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/HeaderNav";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -16,18 +16,20 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="*" element={<Home />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/aboutProyect" element={<AboutProyect />} />
-        <Route path="/attractions" element={<Atractions />} />
-        <Route path="/touristOffer" element={<TouristOffer />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/documents" element={<Documents />} />
-        <Route path="/map" element={<Map />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Router>
+        <Routes>
+          <Route path="*" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/aboutProyect" element={<AboutProyect />} />
+          <Route path="/attractions" element={<Atractions />} />
+          <Route path="/touristOffer" element={<TouristOffer />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/documents" element={<Documents />} />
+          <Route path="/map" element={<Map />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
     </>
   );
 }
