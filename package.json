@@ -2,7 +2,7 @@
   "name": "page_turismo_osa",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rolandomurillo.github.io/page_turismo_osa",
+  "homepage": "https://roldev-22.github.io/page_turismo_osa/",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.6.4",
