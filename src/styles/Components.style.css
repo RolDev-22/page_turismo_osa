@@ -23,6 +23,7 @@
 }
 
 .container-top h1 {
+  font-size: 1.7em;
   text-transform: uppercase;
 }
 
@@ -84,6 +85,10 @@
 }
 
 @media screen and (max-width: 760px) {
+  .container-top h1 {
+    font-size: 1em;
+  }
+
   .container {
     min-width: 315px;
   }
