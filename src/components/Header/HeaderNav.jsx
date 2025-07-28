@@ -7,7 +7,10 @@ function HeaderNav() {
   return (
     <div className="container">
       <section className="container-top">
-        <img src="/Turismo_Osa.png" alt="Logo Turismo Osa" />
+        <img
+          src={`${process.env.PUBLIC_URL}/Turismo_Osa.png`}
+          alt="Logo Turismo Osa"
+        />
         <h1>
           Turismo Rural Comunitario{" "}
           <a
