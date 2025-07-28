@@ -1,7 +1,7 @@
 import "./App.css";
 import "./styles/Components.style.css";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/header-nav";
+import Header from "./components/Header/HeaderNav";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import AboutProyect from "./pages/About_Proyect";

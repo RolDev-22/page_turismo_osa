@@ -1,5 +1,6 @@
 .container {
   width: 95%;
+  min-width: 315px;
   display: flex;
   flex-direction: column;
   margin-top: 0.5em;
@@ -11,19 +12,20 @@
 .container-top {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-evenly;
   column-gap: 50px;
+  text-align: center;
 }
 
 .container-top img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 .container-top h1 {
-  font-size: 1.7em;
+  font-size: 1em;
   text-transform: uppercase;
 }
 
@@ -34,11 +36,54 @@
 
 .container-button {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   padding: 0.5em;
   box-sizing: content-box;
+}
+
+.container-button .button-menu {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 0.3em;
+  background-color: rgb(10, 119, 25, 0.6);
+  border: 1px outset rgb(10, 119, 25, 0.9);
+  padding: 0.5em;
+}
+
+.container-button .button-menu span {
+  position: relative;
+  width: 40px;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5em;
+}
+
+.container-button .button-menu span::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 40px;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5em;
+}
+
+.container-button .button-menu span::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 40px;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5em;
 }
 
 .container-button ul {
@@ -63,8 +108,6 @@
   background-color: rgb(10, 119, 25);
   border-radius: 0.3em;
   text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
-  flex: 0.001 0 115px;
   margin-top: 0.5em;
   overflow: hidden;
 }
@@ -79,24 +122,73 @@
   align-items: center;
 }
 
-.container-button ul li:hover {
-  transform: scale(1.1);
-  background-color: rgba(32, 236, 49, 0.8);
+.container-resize {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  pointer-events: none;
 }
 
-@media screen and (max-width: 760px) {
-  .container-top h1 {
-    font-size: 1em;
+.container-resize.active {
+  max-height: 200px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media screen and (width >= 768px) and (width <= 1025px) {
+  .container-top img {
+    width: 100px;
+    height: 100px;
   }
 
-  .container {
-    min-width: 315px;
+  .container-top h1 {
+    font-size: 1.7em;
+  }
+
+  .container-top h5 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (width > 1025px) {
+  .container-top img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .container-top h1 {
+    font-size: 1.3em;
   }
 
   .container-top {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .container-button ul {
+    width: 100%;
+    column-gap: 0.5em;
+    justify-content: flex-start;
+  }
+
+  .container-button ul li {
+    width: 110px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .container-button ul li:hover {
+    transform: scale(1.1);
+    background-color: rgba(32, 236, 49, 0.8);
+  }
+
+  .container-button ul a {
+    font-size: 0.9em;
+  }
+
+  .container-button .button-menu {
+    display: none;
   }
 }
