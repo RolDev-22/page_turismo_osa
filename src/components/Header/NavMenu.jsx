@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function NavMenu({ active }) {
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 1025) {
-      document.querySelector(".container-resize").classList.add("active");
-    } else {
-      document.querySelector(".container-resize").classList.remove("active");
-    }
-  });
+  useEffect(() => {
+    const handleResize = () => {
+      const container = document.querySelector(".container-resize");
+      if (!container) return;
+
+      if (window.innerWidth > 1025) {
+        container.classList.add("active");
+      } else {
+        container.classList.remove("active");
+      }
+    };
+
+    // Ejecutar inmediatamente
+    handleResize();
+
+    // Agregar event listener
+    window.addEventListener("resize", handleResize);
+
+    // Limpiar al desmontar
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <nav className={`container-resize ${active ? "active" : ""}`}>
