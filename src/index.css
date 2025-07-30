@@ -23,4 +23,5 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Michroma", sans-serif;
+  row-gap: 0.5em;
 }

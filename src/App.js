@@ -1,5 +1,6 @@
 import "./App.css";
 import "./styles/Components.style.css";
+import "./styles/Pages.style.css";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/HeaderNav";
 import Home from "./pages/Home";
@@ -11,6 +12,7 @@ import Events from "./pages/Events";
 import Documents from "./pages/Documents";
 import Map from "./pages/Map";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
         <Route path="/map" element={<Map />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </>
   );
 }

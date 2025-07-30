@@ -5,8 +5,8 @@ function HeaderNav() {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="container">
-      <section className="container-top">
+    <div className="container-header styled-shared">
+      <section className="container-header-top">
         <img
           src={`${process.env.PUBLIC_URL}/Turismo_Osa.png`}
           alt="Logo Turismo Osa"
@@ -24,7 +24,7 @@ function HeaderNav() {
         <h5>Municipalidad de Osa</h5>
       </section>
 
-      <section className="container-button">
+      <section className="container-header-button">
         <button
           id="btn-menu"
           className="button-menu"

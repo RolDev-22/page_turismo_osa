@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavMenu({ active }) {
   useEffect(() => {
     const handleResize = () => {
-      const container = document.querySelector(".container-resize");
+      const container = document.querySelector(".container-header-resize");
       if (!container) return;
 
       if (window.innerWidth > 1025) {
@@ -25,7 +25,7 @@ function NavMenu({ active }) {
   }, []);
 
   return (
-    <nav className={`container-resize ${active ? "active" : ""}`}>
+    <nav className={`container-header-resize ${active ? "active" : ""}`}>
       <ul>
         <li>
           <Link to="/">Inicio</Link>
