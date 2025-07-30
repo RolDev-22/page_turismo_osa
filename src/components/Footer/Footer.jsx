@@ -19,7 +19,7 @@ function Footer() {
             <h4>Municipalidad de Osa</h4>
             <h4>
               <img
-                src={`${process.env.PUBLIC_URL}/tel_svg.svg`}
+                src={`${process.env.PUBLIC_URL}/icon_phone.png`}
                 alt="icono telefónico"
               />
               (506) 2782-0000
