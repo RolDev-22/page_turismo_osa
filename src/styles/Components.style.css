@@ -221,6 +221,62 @@
   font-size: 0.9em;
 }
 
+.container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  row-gap: 0.5em;
+  padding: 0.1em;
+  margin: 0.5em;
+  color: white;
+  border-radius: 0.5em;
+}
+
+.container-login .input-container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2em;
+  padding: 0.2em;
+  margin: 1em;
+  border-radius: 0.5em;
+}
+
+.container-login .input-container input {
+  padding: 0.5em;
+  border-radius: 0.2em;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.9em;
+  outline: none;
+}
+
+.container-login a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+}
+
+.container-login button {
+  width: 120px;
+  cursor: pointer;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  border: none;
+  background-image: linear-gradient(
+    90deg,
+    rgba(90, 200, 50, 255),
+    rgba(0, 180, 20, 255),
+    rgba(0, 110, 20, 255)
+  );
+  color: white;
+  font-size: 0.9em;
+  outline: none;
+}
+
 /*Media Queries*/
 
 /*Media queries Tablet*/
@@ -236,6 +292,12 @@
 
   .container-header-top h5 {
     font-size: 1.5em;
+  }
+
+  .container-login {
+    row-gap: 0.2em;
+    padding: 0.5em;
+    margin: 0.5em;
   }
 }
 
@@ -260,7 +322,7 @@
   }
 
   .container-footer .footer-right h5 {
-    width: clamp(400px, 80%, 90%);
+    width: clamp(400px, 85%, 90%);
   }
 }
 
@@ -304,5 +366,15 @@
 
   .container-header-button .button-menu {
     display: none;
+  }
+
+  .container-login {
+    row-gap: 1em;
+    padding: 1em;
+    margin: 0.5em;
+  }
+
+  .container-login a {
+    font-size: 0.7em;
   }
 }

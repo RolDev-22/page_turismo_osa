@@ -4,8 +4,16 @@ import Login from "../components/Login/Login";
 const Home = () => {
   return (
     <div className="container-box">
-      Desde Home
-      <Login />
+      <div className="box box-login">
+        <h3>Inicio de sesión</h3>
+        <Login />
+      </div>
+      <div className="box box-blog">
+        <h3>Osa te conviene</h3>
+      </div>
+      <div className="box box-jumbotron">
+        <h3>Blog de turismo</h3>
+      </div>
     </div>
   );
 };
