@@ -221,6 +221,7 @@
   font-size: 0.9em;
 }
 
+/*Estilado del Login*/
 .container-login {
   display: flex;
   flex-direction: column;
@@ -257,7 +258,7 @@
 .container-login a {
   text-decoration: none;
   color: white;
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 
 .container-login button {
@@ -275,6 +276,73 @@
   color: white;
   font-size: 0.9em;
   outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/*Estilado del Jumbotron*/
+.container-jumbotron {
+  min-width: 230px;
+  width: 90%;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-jumbotron .content-jumbotron {
+  position: relative;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-radius: 0.5em;
+}
+
+.container-jumbotron .content-jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: 1;
+}
+
+.container-jumbotron .content-jumbotron h2 {
+  position: absolute;
+  top: 0.5em;
+  left: 0.2em;
+  z-index: 1;
+}
+
+.container-jumbotron .content-jumbotron p {
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  left: 0;
+  padding: 0.5em;
+  font-size: 0.8em;
+  z-index: 1;
+  text-align: justify;
+}
+
+.container-jumbotron img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 /*Media Queries*/
@@ -324,6 +392,10 @@
   .container-footer .footer-right h5 {
     width: clamp(400px, 85%, 90%);
   }
+
+  .container-jumbotron .content-jumbotron p {
+    font-size: 1em;
+  }
 }
 
 /*Media queries Desktop*/
@@ -370,11 +442,26 @@
 
   .container-login {
     row-gap: 1em;
-    padding: 1em;
+    padding: 0.8em;
     margin: 0.5em;
   }
 
   .container-login a {
     font-size: 0.7em;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .container-login a:hover {
+    color: rgba(32, 236, 49, 0.8);
+  }
+
+  .container-login button:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(
+      180deg,
+      rgba(90, 200, 50, 255),
+      rgba(0, 180, 20, 255),
+      rgba(0, 110, 20, 255)
+    );
   }
 }

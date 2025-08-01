@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "../components/Login/Login";
+import Jumbotron from "../components/Jumbotron/Jumbotron";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       </div>
       <div className="box box-blog">
         <h3>Osa te conviene</h3>
+        <Jumbotron />
       </div>
       <div className="box box-jumbotron">
         <h3>Blog de turismo</h3>
