@@ -31,6 +31,16 @@
   );
 }
 
+.box-jumbotron {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 0.5em;
+}
+
 /*Media queries*/
 
 /*Media queries Tablet*/
