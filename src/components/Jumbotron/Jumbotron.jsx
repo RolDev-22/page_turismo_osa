@@ -40,14 +40,26 @@ const Jumbotron = () => {
     },
   ];
 
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) =>
+        prevIndex === imagesObjt.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [imagesObjt.length]);
+
+  const { name, description, image } = imagesObjt[index];
+
   return (
-    <div className={`container-jumbotron`}>
+    <div className="container-jumbotron">
       <div className="content-jumbotron">
-        <h2>Hola</h2>
-        <img src={imagesObjt[0].image} alt="" />
-        <p>
-          holaskjnvglkdnfvdofnvsñldmvsdbvnsdklsmdvlknsidvnbsdoskjdfvkjsdnkjvnskdjnvkjsdbkvjbsdkjvnsjdnvksbdkvjbsdkjbinvosjdnvkjsdkivksdivisdiusdhniuvhsiduhviusdivusdiuvisdviusdvsdoiscopcxoansiy8abconasiuhciascoasnmfiu
-        </p>
+        <h2>{name}</h2>
+        <img src={image} alt={`Imagen de ${name}`} />
+        <p>{description}</p>
       </div>
     </div>
   );
