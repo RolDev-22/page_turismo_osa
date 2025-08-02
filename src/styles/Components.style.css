@@ -11,7 +11,7 @@
 /*Estilado del header*/
 .container-header {
   width: 95%;
-  min-width: 315px;
+  min-width: 280px;
   display: flex;
   flex-direction: column;
   margin-top: 0.5em;
@@ -148,7 +148,7 @@
 /*Estilado del footer*/
 .container-footer {
   width: 95%;
-  min-width: 315px;
+  min-width: 280px;
   display: flex;
   flex-direction: column;
   color: white;
@@ -187,7 +187,7 @@
 }
 
 .container-footer-top .footer-right {
-  width: 70%;
+  width: 90%;
   text-align: justify;
 }
 
@@ -206,6 +206,10 @@
   font-size: 0.9em;
 }
 
+.container-footer .footer-right h4:nth-child(1) {
+  color: rgb(0, 255, 34);
+}
+
 .container-footer .footer-right h4 img {
   width: 1.3em;
   height: 1.3em;
@@ -213,12 +217,13 @@
 
 .container-footer .footer-right h5 {
   font-weight: 100;
+  font-size: 0.7em;
 }
 
 .container-footer-button {
   margin-top: 0.5em;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.5em;
 }
 
 /*Estilado del Login*/
@@ -343,6 +348,46 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+}
+
+/*Estilado del Blog*/
+.container-blog {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  max-height: 22em;
+  min-width: 230px;
+  margin-top: 0.5em;
+  row-gap: 0.5em;
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow-y: scroll;
+}
+
+.box-post {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  row-gap: 0.5em;
+  padding: 0.5em;
+  border-top: 1px inset white;
+}
+
+.box-post h4 {
+  text-align: justify;
+  font-size: 0.8em;
+  color: rgb(0, 255, 34);
+}
+
+.box-post p {
+  text-align: justify;
+  font-size: 0.7em;
 }
 
 /*Media Queries*/

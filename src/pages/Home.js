@@ -1,6 +1,7 @@
 import React from "react";
 import Login from "../components/Login/Login";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
+import Blog from "../components/Blogger/Blog";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       </div>
       <div className="box box-blog">
         <h3>Blog de turismo</h3>
+        <Blog />
       </div>
     </div>
   );
