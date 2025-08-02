@@ -42,6 +42,65 @@
   border-radius: 0.5em;
 }
 
+/*Estilo de la seccion de informacion*/
+.container-information {
+  width: 95%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  row-gap: 1em;
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  );
+  border-radius: 0.5em;
+}
+
+.container-information h3 {
+  width: clamp(150px, 100%, 700px);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.3em;
+  border-radius: 0.1em;
+  color: white;
+  font-size: 1em;
+  background-image: linear-gradient(
+    90deg,
+    rgba(90, 200, 50, 255),
+    rgba(0, 180, 20, 255),
+    rgba(0, 110, 20, 255)
+  );
+}
+
+.container-information div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-information a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-information a img {
+  object-fit: fill;
+  width: 100px;
+  height: 100px;
+}
+
+.container-information p {
+  text-align: justify;
+  font-size: 0.7em;
+  color: white;
+}
+
 /*Media queries*/
 
 /*Media queries Tablet*/
@@ -72,5 +131,14 @@
 
   .box:nth-child(2) {
     width: 50%;
+  }
+
+  .container-information div {
+    flex-direction: row;
+    column-gap: 1em;
+  }
+
+  .container-information a:hover {
+    transform: scale(1.1) translateY(-0.5em);
   }
 }
