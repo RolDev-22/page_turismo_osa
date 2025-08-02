@@ -28,32 +28,53 @@ function NavMenu({ active }) {
     <nav className={`container-header-resize ${active ? "active" : ""}`}>
       <ul>
         <li>
-          <Link to="/">Inicio</Link>
+          <Link onClick={activeMenu} to="/">
+            Inicio
+          </Link>
         </li>
         <li>
-          <Link to="/aboutProyect">Sobre el Proyecto</Link>
+          <Link onClick={activeMenu} to="/aboutProyect">
+            Sobre el Proyecto
+          </Link>
         </li>
         <li>
-          <Link to="/about">Conózcanos</Link>
+          <Link onClick={activeMenu} to="/about">
+            Conózcanos
+          </Link>
         </li>
         <li>
-          <Link to="/attractions">Atractivos</Link>
+          <Link onClick={activeMenu} to="/attractions">
+            Atractivos
+          </Link>
         </li>
         <li>
-          <Link to="/events">Eventos</Link>
+          <Link onClick={activeMenu} to="/events">
+            Eventos
+          </Link>
         </li>
         <li>
-          <Link to="/documents">Documentos</Link>
+          <Link onClick={activeMenu} to="/documents">
+            Documentos
+          </Link>
         </li>
         <li>
-          <Link to="/map">Mapa</Link>
+          <Link onClick={activeMenu} to="/map">
+            Mapa
+          </Link>
         </li>
         <li>
-          <Link to="/contact">Contacto</Link>
+          <Link onClick={activeMenu} to="/contact">
+            Contacto
+          </Link>
         </li>
       </ul>
     </nav>
   );
+}
+
+function activeMenu() {
+  const container = document.querySelector(".container-header-resize");
+  container.classList.toggle("active");
 }
 
 export default NavMenu;
