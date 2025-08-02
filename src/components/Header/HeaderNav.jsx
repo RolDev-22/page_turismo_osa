@@ -34,7 +34,7 @@ function HeaderNav() {
           <span></span>
         </button>
 
-        <NavMenu active={active} />
+        <NavMenu active={active} setActive={setActive} />
       </section>
     </div>
   );

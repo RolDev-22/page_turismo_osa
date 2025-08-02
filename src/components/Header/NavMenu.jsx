@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function NavMenu({ active }) {
+function NavMenu({ active, setActive }) {
   useEffect(() => {
     const handleResize = () => {
       const container = document.querySelector(".container-header-resize");
@@ -28,53 +28,48 @@ function NavMenu({ active }) {
     <nav className={`container-header-resize ${active ? "active" : ""}`}>
       <ul>
         <li>
-          <Link onClick={activeMenu} to="/">
+          <Link onClick={() => setActive(false)} to="/">
             Inicio
           </Link>
         </li>
         <li>
-          <Link onClick={activeMenu} to="/aboutProyect">
+          <Link onClick={() => setActive(false)} to="/aboutProyect">
             Sobre el Proyecto
           </Link>
         </li>
         <li>
-          <Link onClick={activeMenu} to="/about">
+          <Link onClick={() => setActive(false)} to="/about">
             Conózcanos
           </Link>
         </li>
         <li>
-          <Link onClick={activeMenu} to="/attractions">
+          <Link onClick={() => setActive(false)} to="/attractions">
             Atractivos
           </Link>
         </li>
         <li>
-          <Link onClick={activeMenu} to="/events">
+          <Link onClick={() => setActive(false)} to="/events">
             Eventos
           </Link>
         </li>
         <li>
-          <Link onClick={activeMenu} to="/documents">
+          <Link onClick={() => setActive(false)} to="/documents">
             Documentos
           </Link>
         </li>
         <li>
-          <Link onClick={activeMenu} to="/map">
+          <Link onClick={() => setActive(false)} to="/map">
             Mapa
           </Link>
         </li>
         <li>
-          <Link onClick={activeMenu} to="/contact">
+          <Link onClick={() => setActive(false)} to="/contact">
             Contacto
           </Link>
         </li>
       </ul>
     </nav>
   );
-}
-
-function activeMenu() {
-  const container = document.querySelector(".container-header-resize");
-  container.classList.toggle("active");
 }
 
 export default NavMenu;
