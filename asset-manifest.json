@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/page_turismo_osa/static/css/main.3264d43d.css",
-    "main.js": "/page_turismo_osa/static/js/main.22b7a22c.js",
+    "main.js": "/page_turismo_osa/static/js/main.4b403a41.js",
     "static/media/bg_page.jpg": "/page_turismo_osa/static/media/bg_page.f2966b5ea1be234d2111.jpg",
     "index.html": "/page_turismo_osa/index.html",
     "main.3264d43d.css.map": "/page_turismo_osa/static/css/main.3264d43d.css.map",
-    "main.22b7a22c.js.map": "/page_turismo_osa/static/js/main.22b7a22c.js.map"
+    "main.4b403a41.js.map": "/page_turismo_osa/static/js/main.4b403a41.js.map"
   },
   "entrypoints": [
     "static/css/main.3264d43d.css",
-    "static/js/main.22b7a22c.js"
+    "static/js/main.4b403a41.js"
   ]
 }
